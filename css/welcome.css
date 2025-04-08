@@ -1,0 +1,59 @@
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 23px;
+
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+
+.welcome-container h1 {
+  text-align: center;
+  font-size: xx-large;
+}
+
+.welcome-container span {
+  width: 320px;
+  text-align: center;
+  color: hsl(var(--muted-foreground));
+  font-size: medium;
+}
+
+.ask-button {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: transparent;
+
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ask-button:hover {
+  transform: translateY(-2px);
+  background-color: hsl(var(--primary), 0.9);
+  border-color: hsl(var(--primary));
+}
+
+.ask-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.welcome-container.hidden {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.welcome-container.active {
+  opacity: 1;
+  height: auto;
+  overflow: visible;
+}
